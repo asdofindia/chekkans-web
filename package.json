@@ -1,0 +1,26 @@
+{
+  "name": "chekkans-web",
+  "version": "0.0.1",
+  "description": "Chekkans Web",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asdofindia/chekkans-web.git"
+  },
+  "keywords": [
+    "unicode",
+    "converter"
+  ],
+  "author": "Akshay S Dinesh <asdofindia@gmail.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/asdofindia/chekkans-web/issues"
+  },
+  "homepage": "https://github.com/asdofindia/chekkans-web#readme",
+  "dependencies": {
+    "unicode-converter": "asdofindia/chekkans"
+  }
+}
