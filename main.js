@@ -1,5 +1,18 @@
 var unicoderter = require('unicode-converter');
 
+document.querySelector('#mapselect').addEventListener('change', function(e){
+    var mapUrl = $('#mapselect').val();
+    mapUrl = './maps/' + mapUrl + '.map';
+    $.ajax({
+        url: mapUrl,
+        success: function(data) {
+            $('#map').val(data);
+            // console.log('response data' + data);
+        },
+        dataType: 'text'
+    });
+});
+
 document.querySelector('#convert').addEventListener('click', function(e){
     document.querySelector('#out').value = "Converting...";
     var map = document.querySelector('#map').value;
