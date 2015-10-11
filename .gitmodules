@@ -1,0 +1,3 @@
+[submodule "unicode-conversion-maps"]
+	path = maps
+	url = git@github.com:asdofindia/unicode-conversion-maps.git
