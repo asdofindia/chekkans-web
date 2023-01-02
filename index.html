@@ -1,37 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Unicode Converter based on Chekkans</title>
-    </head>
-    <body>
-        <label for="in">ASCII text</label> ->
-        <label for="out">Unicode text</label>
-        <br>
-        <textarea id="in" rows="18" cols="40"></textarea>
-        <textarea id="out" rows="18" cols="40"></textarea>
-        <button id="convert">Go</button>
-        <br>
-        <div id="mapselector">
-            Choose the font to convert from:
-            <select id="mapselect">
-                <option value="select" selected>Select...</option>
-                <option value="ambili">Ambili</option>
-                <option value="banglapedia">Banglapedia</option>
-                <option value="charaka">Charaka</option>
-                <option value="haritha">Haritha</option>
-                <option value="indulekha">Indulekha</option>
-                <option value="karthika">Karthika</option>
-                <option value="manorama">Manorama</option>
-                <option value="matweb">Matweb</option>
-                <option value="nandini">Nandini</option>
-                <option value="panchari">Panchari</option>
-                <option value="uma">Uma</option>
-                <option value="valluvar">Valluvar</option>
-            </select>
-        </div>
-        <textarea id="map" rows="100"></textarea>
-        <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
-        <script src="bundle.js" charset="utf-8"></script>
-    </body>
+   <head>
+      <meta charset="utf-8">
+      <title>Unicode Converter based on Chekkans</title>
+      <style>
+         body {
+         font-family: sans-serif;
+         }
+         .container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         }
+         .input-group {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 1rem;
+         }
+         .input-group label {
+         font-weight: bold;
+         margin-bottom: 0.5rem;
+         }
+         .input-group textarea {
+         width: 90%;
+         height: 300px;
+         font-size: 1rem;
+         padding: 0.5rem;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         resize: none;
+         }
+         #convert {
+         cursor: pointer;
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         border-radius: 4px;
+         padding: 0.5rem 1rem;
+         font-size: 1rem;
+         }
+         #convert:hover {
+         background-color: #45a049;
+         }
+         #mapselector {
+         display: flex;
+         align-items: center;
+         margin: 1rem;
+         }
+         #mapselector label {
+         margin-right: 1rem;
+         }
+         #mapselect {
+         font-size: 1rem;
+         padding: 0.5rem;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         }
+         #map {
+         width: 60%;
+         height: 200px;
+         font-size: 1rem;
+         padding: 0.5rem;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         resize: none;
+         margin: 1rem;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="input-group">
+            <label for="in">ASCII text</label>
+            <textarea id="in" rows="18" cols="40"></textarea>
+         </div>
+         <button id="convert">Go</button>
+         <div class="input-group">
+            <label for="out">Unicode text</label>
+            <textarea id="out" rows="18" cols="40"></textarea>
+         </div>
+      </div>
+      <div id="mapselector">
+         <label for="mapselect">Choose the font to convert from:</label>
+         <select id="mapselect">
+            <option value="select" selected>Select...</option>
+            <option value="ambili">Ambili</option>
+            <option value="banglapedia">Banglapedia</option>
+            <option value="charaka">Charaka</option>
+            <option value="haritha">Haritha</option>
+            <option value="indulekha">Indulekha</option>
+            <option value="karthika">Karthika</option>
+            <option value="manorama">Manorama</option>
+            <option value="matweb">Matweb</option>
+            <option value="nandini">Nandini</option>
+            <option value="panchari">Panchari</option>
+            <option value="uma">Uma</option>
+            <option value="valluvar">Valluvar</option>
+         </select>
+      </div>
+      <textarea id="map" rows="100"></textarea>
+      <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
+      <script src="bundle.js" charset="utf-8"></script>
+   </body>
 </html>
+
